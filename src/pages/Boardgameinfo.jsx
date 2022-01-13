@@ -10,7 +10,7 @@ const Boardgameinfo = ({ Boardgames, addToCart, cart }) => {
     const boardgame = Boardgames.find(boardgame => +boardgame.id === +id)
 
     useEffect(() => {
-        document.querySelector('body').scrollTo(0,0)
+        window.scrollTo(0, 0)
     }, [boardgame])
 
     function addboardgameToCart(boardgame) {
