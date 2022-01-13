@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth;
-  background: linear-gradient(180deg, rgba(255,255,255,1) 99%, rgba(36,36,36,1) 100%);
+  background: linear-gradient(180deg, rgba(255,255,255,1) 98%, rgba(36,36,36,1) 99%);
 }
 
 body {
@@ -258,6 +258,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-top: 12px;
 }
 
 .header__img {
@@ -395,6 +396,9 @@ FEATURES
   width: 25%;
   padding: 24px;
   transition: all 300ms ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .boardgame:hover {
@@ -408,12 +412,15 @@ FEATURES
 }
 
 .boardgame__img--wrapper {
-  max-height: 250px;
-  max-width: 250px;
-  margin-bottom: 8px;
   border-radius: 4px;
   overflow: hidden;
   display: flex;
+}
+
+.link-to {
+  max-width: 250px;
+  max-height: 250px;
+  margin-bottom: 8px;
 }
 
 .boardgame__img--skeleton {
@@ -449,6 +456,7 @@ FEATURES
 }
 
 .boardgame__title {
+  text-align: center;
   font-size: 20px;
   margin-bottom: 8px;
 }
@@ -604,9 +612,8 @@ select {
 }
 
 .boardgame__selected--img {
-  max-height: 500px;
-  width: auto;
-  max-width: 100%;
+  width: 90%;
+  border-radius: 8px;
 }
 
 .boardgame__selected--description {
@@ -716,8 +723,8 @@ select {
 
 .cart__boardgame--img {
   width: 100%;
-  max-width: 90px;
-  max-height: 128px;
+  max-width: 100px;
+  max-height: 100px;
 }
 
 
@@ -815,6 +822,11 @@ select {
 
   .boardgame__selected {
     flex-direction: column;
+  }
+  .boardgame__selected--img {
+    max-height: 500px;
+    width: auto;
+    max-width: 100%;
   }
   .boardgame__selected--figure {
     width: 100%;

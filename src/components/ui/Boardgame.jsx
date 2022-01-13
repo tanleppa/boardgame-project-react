@@ -25,7 +25,7 @@ const Boardgame = ({boardgame}) => {
         <div className="boardgame">
             {
                 img
-                ? (<><Link to={`/boardgames/${boardgame.id}`}>
+                ? (<><Link className='link-to' to={`/boardgames/${boardgame.id}`}>
                 <figure
                 className="boardgame__img--wrapper">
                     <img
