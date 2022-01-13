@@ -5,7 +5,7 @@ const Boardgames = ({ Boardgames: initialBoardgames }) => {
     const [boardgames, setBoardgames] = useState(initialBoardgames)
 
     useEffect(() => {
-        window.scrollTo(0, 0)
+        document.querySelector('body').scrollTo(0,0)
     }, [])
 
     function filterboardgames(event) {

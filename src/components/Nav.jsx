@@ -55,17 +55,20 @@ const Nav = ({ cart }) => {
                     </button>
                     <ul className="menu__links">
                         <li className="menu__list">
-                            <Link to="" className="menu__link">
+                            <Link to="" className="menu__link"
+                            onClick={toggleMenu}>
                                 Etusivu
                             </Link>
                         </li>
                         <li className="menu__list">
-                            <Link to="/boardgames" className="menu__link">
+                            <Link to="/boardgames" className="menu__link"
+                            onClick={toggleMenu}>
                                 Lautapelit
                             </Link>
                         </li>
                         <li className="menu__list">
-                            <Link to="/cart" className="menu__link">
+                            <Link to="/cart" className="menu__link"
+                            onClick={toggleMenu}>
                                 Ostoskori
                             </Link>
                         </li>
