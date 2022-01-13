@@ -19,6 +19,7 @@ html {
 
 body {
   overflow-x: hidden;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 98%, rgba(36,36,36,1) 99%);
 }
 
 .centered {
@@ -414,13 +415,14 @@ FEATURES
 .boardgame__img--wrapper {
   border-radius: 4px;
   overflow: hidden;
-  display: flex;
 }
 
 .link-to {
   max-width: 250px;
-  max-height: 250px;
   margin-bottom: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .boardgame__img--skeleton {
