@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import Boardgame from '../components/ui/Boardgame';
 import Price from '../components/ui/Price';
@@ -8,6 +8,10 @@ import Rating from '../components/ui/Rating';
 const Boardgameinfo = ({ Boardgames, addToCart, cart }) => {
     const { id } = useParams()
     const boardgame = Boardgames.find(boardgame => +boardgame.id === +id)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     function addboardgameToCart(boardgame) {
         addToCart(boardgame)
@@ -57,7 +61,7 @@ const Boardgameinfo = ({ Boardgames, addToCart, cart }) => {
                                     </p>
                                 </div>
                                 {
-                                    boardgameExistsOnCart() ? <Link to="/cart" className="boardgame__link"><button className="btn">Checkout</button></Link>
+                                    boardgameExistsOnCart() ? <Link to="/cart" className="boardgame__link"><button className="btn">Siirry ostoskoriin</button></Link>
                                     : <button className="btn" onClick={() => addboardgameToCart(boardgame)}>Lisää koriin</button>
                                 }
                             </div>

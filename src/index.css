@@ -14,6 +14,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: linear-gradient(180deg, rgba(255,255,255,1) 99%, rgba(36,36,36,1) 100%);
 }
 
 body {
@@ -402,12 +403,13 @@ FEATURES
 
 .boardgame__img {
   object-fit: contain;
-  max-height: 250px;
-  max-width: 250px;
+  width: 100%;
   transition: all 300ms ease;
 }
 
 .boardgame__img--wrapper {
+  max-height: 250px;
+  max-width: 250px;
   margin-bottom: 8px;
   border-radius: 4px;
   overflow: hidden;
@@ -514,7 +516,7 @@ footer {
 /* 
 **
 
-boardgameS PAGE
+BOARDGAMES PAGE
 
 **
 */
@@ -535,11 +537,11 @@ boardgameS PAGE
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 24px;
 }
 
 .boardgames__header--title {
   margin-bottom: 0;
+  margin-right: 4px;
 }
 
 select {

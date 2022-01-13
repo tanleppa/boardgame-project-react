@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Boardgame from '../components/ui/Boardgame'
 
 const Boardgames = ({ Boardgames: initialBoardgames }) => {
     const [boardgames, setBoardgames] = useState(initialBoardgames)
+
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
 
     function filterboardgames(event) {
         const filter = event.target.value
