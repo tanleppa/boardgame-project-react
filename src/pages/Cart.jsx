@@ -102,8 +102,7 @@ const Cart = ({ cart, changeQuantity, removeFromCart }) => {
                                 <span>Yhteensä</span>
                                 <span>{total()} €</span>
                             </div>
-                            <button className="btn btn__checkout no-cursor"
-                            onClick={() => alert('Fake Store')}>
+                            <button className="btn btn__checkout no-cursor">
                                 Siirry maksamaan
                             </button>
                         </div>}
