@@ -19,7 +19,7 @@ const Nav = ({ cart }) => {
     return (
         <nav>
             <div className="nav__container">
-                <Link to="/">
+                <Link to="/" className='centered'>
                     <img src={Logo} alt="" className='logo'/>
                 </Link>
                 <ul className="nav__links">

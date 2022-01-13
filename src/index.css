@@ -17,8 +17,13 @@ html {
 }
 
 body {
-  max-width: 100vw;
   overflow-x: hidden;
+}
+
+.centered {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
@@ -96,6 +101,7 @@ button:active {
 }
 
 .nav__container {
+  overflow: hidden;
   width: 100%;
   max-width: 1200px;
   padding: 0 24px;
@@ -168,7 +174,7 @@ button:active {
 }
 
 .menu__backdrop {
-  position: absolute;
+  position: fixed;
   background-color: #242424;
   top: 0;
   left: 0;
@@ -185,8 +191,10 @@ button:active {
 }
 
 .menu--open {
-  max-height: 100vh;
-  overflow: hidden;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 .menu--open .menu__backdrop {
@@ -385,7 +393,7 @@ FEATURES
 }
 
 .boardgame__img {
-  max-height: 320px;
+  max-height: 250px;
   max-width: 250px;
   transition: all 300ms ease;
 }
