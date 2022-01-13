@@ -14,7 +14,7 @@
 
 html {
   scroll-behavior: smooth;
-  background-color: linear-gradient(180deg, rgba(255,255,255,1) 98%, rgba(36,36,36,1) 99%);
+  background-color: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(36,36,36,1) 51%);
 }
 
 body {
