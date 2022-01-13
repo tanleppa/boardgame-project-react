@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import LibraryLogo from "../assets/Library.svg"
+import Logo from "../assets/logo.png"
 import { Link } from "react-router-dom"
 
 const Nav = ({ cart }) => {
@@ -20,17 +20,17 @@ const Nav = ({ cart }) => {
         <nav>
             <div className="nav__container">
                 <Link to="/">
-                    <img src={LibraryLogo} alt="" className='logo'/>
+                    <img src={Logo} alt="" className='logo'/>
                 </Link>
                 <ul className="nav__links">
                     <li className='nav__list'>
                         <Link to="/" className="nav__link">
-                            Home
+                            Etusivu
                         </Link>
                     </li>
                     <li className='nav__list'>
-                        <Link to="/books" className="nav__link">
-                            Books
+                        <Link to="/boardgames" className="nav__link">
+                            Lautapelit
                         </Link>
                     </li>
                     <button className='btn__menu' onClick={toggleMenu}>
@@ -56,17 +56,17 @@ const Nav = ({ cart }) => {
                     <ul className="menu__links">
                         <li className="menu__list">
                             <Link to="" className="menu__link">
-                                Home
+                                Etusivu
                             </Link>
                         </li>
                         <li className="menu__list">
-                            <Link to="/books" className="menu__link">
-                                Books
+                            <Link to="/boardgames" className="menu__link">
+                                Lautapelit
                             </Link>
                         </li>
                         <li className="menu__list">
                             <Link to="/cart" className="menu__link">
-                                Cart
+                                Ostoskori
                             </Link>
                         </li>
                     </ul>

@@ -8,24 +8,24 @@ const Highlights = () => {
             <div className="container">
                 <div className="row">
                     <h2 className="section__title">
-                        Why choose <span className="purple">Library</span>
+                        Miksi valita <span className="purple">Bamboo</span>
                     </h2>
                     <div className="highlight__wrapper">
 
                         <Highlight
                             icon={<FontAwesomeIcon icon="bolt"/>}
-                            title="Easy and Quick"
-                            para="Get access to the book instantly."/>
+                            title="Helppoa ja nopeaa"
+                            para="Toimitus jopa samana päivänä"/>
 
                         <Highlight
-                            icon={<FontAwesomeIcon icon="book-open"/>}
-                            title="10,000+ Books"
-                            para="Library has booksin all your favourite categories."/>
+                            icon={<FontAwesomeIcon icon="chess-rook"/>}
+                            title="10 000+ lautapeliä"
+                            para="Bamboosta löytyy peli jokaisen makuun"/>
 
                         <Highlight
                             icon={<FontAwesomeIcon icon="tags"/>}
-                            title="Afforadble"
-                            para="Get your hands on books popular books for as little as 10€"/>
+                            title="Edullinen"
+                            para="Huippusuosittuja pelejä jopa hintaan 10€"/>
                             
                     </div>
                 </div>

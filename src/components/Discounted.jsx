@@ -1,6 +1,6 @@
 import React from 'react';
-import Book from './ui/Book';
-import { books } from "../data"
+import Boardgame from './ui/Boardgame';
+import { boardgames } from "../data"
 
 const Discounted = () => {
     return (
@@ -8,14 +8,14 @@ const Discounted = () => {
             <div className="container">
                 <div className="row">
                     <h2 className="section__title">
-                        Discounted <span className="purple">Books</span>
+                        Alennuksessa olevat <span className="purple">Lautapelit</span>
                     </h2>
-                    <div className="books">
-                        {books
-                            .filter(book => !!book.salePrice)
+                    <div className="boardgames">
+                        {boardgames
+                            .filter(boardgame => !!boardgame.salePrice)
                             .slice(0, 8)
-                            .map(book => <Book key={book.id}
-                                               book={book} />)}
+                            .map(boardgame => <Boardgame key={boardgame.id}
+                                               boardgame={boardgame} />)}
                     </div>
                 </div>
             </div>

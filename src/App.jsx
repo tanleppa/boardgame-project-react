@@ -2,10 +2,10 @@ import Footer from "./components/Footer";
 import Nav from "./components/Nav"
 import Home from "./pages/Home"
 import Cart from "./pages/Cart"
-import BookInfo from "./pages/BookInfo";
+import Boardgameinfo from "./pages/Boardgameinfo";
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom"
-import Books from "./pages/Books";
-import { books } from './data'
+import Boardgames from "./pages/Boardgames";
+import { boardgames } from './data'
 import { useState } from "react";
 
 function App() {
@@ -40,9 +40,9 @@ function App() {
 
           <Routes>
             <Route path="/" element={<Home />}/>
-            <Route path="/books" element={<Books books={books}/>}/>
-            <Route path="/books/:id" element={<BookInfo books={books} addToCart={addToCart} cart={cart}/>} />
-            <Route path="/cart" element={<Cart books={books} cart={cart} changeQuantity={changeQuantity} removeFromCart={removeFromCart}/>} />
+            <Route path="/boardgames" element={<Boardgames Boardgames={boardgames}/>}/>
+            <Route path="/boardgames/:id" element={<Boardgameinfo Boardgames={boardgames} addToCart={addToCart} cart={cart}/>} />
+            <Route path="/cart" element={<Cart Boardgames={boardgames} cart={cart} changeQuantity={changeQuantity} removeFromCart={removeFromCart}/>} />
           </Routes>
 
           <Footer />

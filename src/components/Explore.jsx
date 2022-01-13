@@ -7,10 +7,10 @@ const Explore = () => {
             <div className="container">
                 <div className="row row__column">
                     <h2>
-                        Explore more <span className="purple">Books</span>
+                        Löydä lisää <span className="purple">Lautapelejä</span>
                     </h2>
-                    <Link to="/books">
-                        <button className="btn">Explore books</button>
+                    <Link to="/boardgames">
+                        <button className="btn">Kaikki pelit</button>
                     </Link>
                 </div>
             </div>

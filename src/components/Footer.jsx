@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../assets/Library.svg'
+import Logo from '../assets/logo.png'
 import { Link } from "react-router-dom"
 
 const Footer = () => {
@@ -13,13 +13,13 @@ const Footer = () => {
                         </figure>
                     </Link>
                     <div className="footer__list">
-                        <Link to="/" className='footer__link'>Home</Link>
-                        <span className='footer__link no-cursor'>About</span>
-                        <Link to="/books" className='footer__link'>Books</Link>
-                        <Link to="/cart" className='footer__link'>Cart</Link>
+                        <Link to="/" className='footer__link'>Etusivu</Link>
+                        <span className='footer__link no-cursor'>Tietoa</span>
+                        <Link to="/boardgames" className='footer__link'>Lautapelit</Link>
+                        <Link to="/cart" className='footer__link'>Ostoskori</Link>
                     </div>
                     <div className="footer__copyright">
-                        Copyright &copy; 2022 Library
+                        Copyright &copy; 2022 Bamboo
                     </div>
                 </div>
             </div>

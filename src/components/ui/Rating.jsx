@@ -3,7 +3,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Rating = ({ rating }) => {
     return (
-        <div className="book__ratings">
+        <div className="boardgame__ratings">
             {
                 new Array(Math.floor(rating))
                     .fill(0)

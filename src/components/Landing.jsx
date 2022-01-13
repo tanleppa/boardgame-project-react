@@ -1,5 +1,6 @@
 import React from 'react';
-import UndrawBooks from '../assets/Undraw_Books.svg'
+import UndrawBoardgames from '../assets/Undraw_Boardgames.svg'
+import bamboos from '../assets/bamboos.png'
 
 const Landing = () => {
     return (
@@ -7,14 +8,15 @@ const Landing = () => {
             <header>
                 <div className="header__container">
                     <div className="header__description">
-                        <h1>Finland's most awarded book store</h1>
-                        <h2>Find your dream book with <span className='purple'>Library</span></h2>
+                        <h1>Suomen palkituin lautapelikauppa netissä</h1>
+                        <h2>Löydä unelmiesi lautapeli <span className='purple'>Bamboolla</span></h2>
                         <a href="#features">
-                            <button className='btn'>Browse books</button>
+                            <button className='btn'>Selaa pelejä</button>
                         </a>
                     </div>
                     <figure className='header__img--wrapper'>
-                        <img src={UndrawBooks} alt="" />
+                        <img src={UndrawBoardgames} alt="" />
+                        <img src={bamboos} alt="" className='bamboos'/>
                     </figure>
                 </div>
             </header>

@@ -2,12 +2,12 @@ import React from 'react';
 
 const Price = ({ originalPrice, salePrice }) => {
     return (
-        <div className="book__price">
+        <div className="boardgame__price">
             {
                 salePrice
                 ?
                 (<>
-                <span className="book__price--normal">
+                <span className="boardgame__price--normal">
                 {originalPrice.toFixed(2)} €
                 </span>
                 {salePrice.toFixed(2)} €

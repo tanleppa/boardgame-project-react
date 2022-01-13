@@ -21,42 +21,42 @@ const Cart = ({ cart, changeQuantity, removeFromCart }) => {
     }
 
     return (
-        <div id="books__body">
-            <main id="books__main">
-                <div className="books__container">
+        <div id="boardgames__body">
+            <main id="boardgames__main">
+                <div className="boardgames__container">
                     <div className="row">
-                        <div className="book__selected--top">
+                        <div className="boardgame__selected--top">
                             <h2 className="cart__title">
-                                Cart
+                                Ostoskori
                             </h2>
                         </div>
                         <div className="cart">
                             <div className="cart__header">
-                                <span className="cart__book">Book</span>
-                                <span className="cart__quantity">Quantity</span>
-                                <span className="cart__total">Price</span>
+                                <span className="cart__boardgame">Lautapeli</span>
+                                <span className="cart__quantity">Määrä</span>
+                                <span className="cart__total">Hinta</span>
                             </div>
                             <div className="cart__body">
                                 {
-                                    cart.map(book => {
+                                    cart.map(boardgame => {
                                         return (
-                                            <div className="cart__item">
-                                                <div className="cart__book">
-                                                    <img src={book.url} alt="" className='cart__book--img'/>
-                                                    <div className="cart__book--info">
-                                                        <span className="cart__book--title">
-                                                            {book.title}
+                                            <div className="cart__item" key={boardgame.id}>
+                                                <div className="cart__boardgame">
+                                                    <img src={boardgame.url} alt="" className='cart__boardgame--img'/>
+                                                    <div className="cart__boardgame--info">
+                                                        <span className="cart__boardgame--title">
+                                                            {boardgame.title}
                                                         </span>
-                                                        <span className="cart__book--price">
+                                                        <span className="cart__boardgame--price">
                                                             {
-                                                                book.salePrice
-                                                                ? book.salePrice.toFixed(2)
-                                                                : book.originalPrice.toFixed(2)
+                                                                boardgame.salePrice
+                                                                ? boardgame.salePrice.toFixed(2)
+                                                                : boardgame.originalPrice.toFixed(2)
                                                             } €
                                                         </span>
-                                                        <button className="cart__book--remove"
-                                                        onClick={() => removeFromCart(book)}>
-                                                            Remove
+                                                        <button className="cart__boardgame--remove"
+                                                        onClick={() => removeFromCart(boardgame)}>
+                                                            Poista
                                                         </button>
                                                     </div>
                                                 </div>
@@ -66,14 +66,14 @@ const Cart = ({ cart, changeQuantity, removeFromCart }) => {
                                                     min={0}
                                                     max={99}
                                                     className='cart__input'
-                                                    onChange={(e) => changeQuantity(e.target.value, book)}
-                                                    value={book.quantity}/>
+                                                    onChange={(e) => changeQuantity(e.target.value, boardgame)}
+                                                    value={boardgame.quantity}/>
                                                 </div>
                                                 <div className="cart__total">
                                                     {
-                                                        book.salePrice
-                                                        ? (book.salePrice * book.quantity).toFixed(2) 
-                                                        : (book.originalPrice * book.quantity).toFixed(2) 
+                                                        boardgame.salePrice
+                                                        ? (boardgame.salePrice * boardgame.quantity).toFixed(2) 
+                                                        : (boardgame.originalPrice * boardgame.quantity).toFixed(2) 
                                                     } €
                                                 </div>
                                             </div>
@@ -83,28 +83,28 @@ const Cart = ({ cart, changeQuantity, removeFromCart }) => {
                             </div>
                             {cart.length === 0 && <div className="cart__empty">
                                 <img src={EmptyCart} alt="" className="cart__empty--img" />
-                                <h2>You don't have any books in your cart :(</h2>
-                                <Link to="/books">
-                                    <button className="btn">Browse books</button>
+                                <h2>Ostoskorisi on tyhjä :(</h2>
+                                <Link to="/boardgames">
+                                    <button className="btn">Selaa pelejä</button>
                                 </Link>
                             </div>}
                         </div>
                         {cart.length > 0 && <div className="total">
                             <div className="total__item total__sub-total">
-                                <span>Subtotal</span>
+                                <span>Välisumma</span>
                                 <span>{subTotal()} €</span>
                             </div>
                             <div className="total__item total__tax">
-                                <span>Tax</span>
+                                <span>Vero</span>
                                 <span>{tax()} €</span>
                             </div>
                             <div className="total__item total__price">
-                                <span>Total</span>
+                                <span>Yhteensä</span>
                                 <span>{total()} €</span>
                             </div>
                             <button className="btn btn__checkout no-cursor"
                             onClick={() => alert('Fake Store')}>
-                                Proceed to checkout
+                                Siirry maksamaan
                             </button>
                         </div>}
                     </div>
