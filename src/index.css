@@ -153,6 +153,10 @@ button:active {
   margin-left: 8px;
 }
 
+.cart__empty > h2 {
+  margin-top: 24px;
+}
+
 .cart__length {
   background-color: #FF4F7D;
   color: white;
